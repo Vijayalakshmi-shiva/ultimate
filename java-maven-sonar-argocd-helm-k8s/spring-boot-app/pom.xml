@@ -68,11 +68,8 @@
                 </configuration>
             </plugin>
 
-        </plugins>
-</build>
-
- <build>
-    <pluginManagement>
+    </plugins>
+      <pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -82,6 +79,10 @@
         </plugins>
     </pluginManagement>
 </build>
+
+
+
+
 
 
 </project>

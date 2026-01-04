@@ -27,7 +27,7 @@ pipeline {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
        sh 'JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64'
        sh 'echo $JAVA_HOME'   
-       sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
+       sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn verify clean org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login='squ_82e4c2b65f8adeaa7b86c7f03ceb77412429f773' -Dsonar.host.url=http://localhost:9000'
         }
       }
     }
